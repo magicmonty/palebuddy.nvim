@@ -153,8 +153,8 @@ Group.new("TabLine",                        c.comment_grey)                     
 Group.new("TabLineFill")                                                                    -- tab pages line, where there are no labels
 Group.new("TabLineSel",                     c.white)                                        -- tab pages line, active tab page label
 Group.new("Title",                          c.green)                                        -- titles for output from ":set all", ":autocmd" etc.
-Group.new("Visual",                         c.visual_black,   c.visual_grey)                -- Visual mode selection
-Group.new("VisualNOS",                      c.none,           c.visual_grey)                -- Visual mode selection when vim is "Not Owning the Selection". Only X11 Gui's gui-x11 and xterm-clipboard supports this.
+Group.new("Visual",                         c.visual_black,   c.blue:dark())                -- Visual mode selection
+Group.new("VisualNOS",                      c.none,           c.blue:dark())                -- Visual mode selection when vim is "Not Owning the Selection". Only X11 Gui's gui-x11 and xterm-clipboard supports this.
 Group.new("WarningMsg",                     c.yellow)                                       -- warning messages
 Group.new("WildMenu",                       c.black,          c.blue)                       -- current match in 'wildmenu' completion
 
@@ -556,4 +556,11 @@ Group.new("CmpItemAbbrMatch",               c.green,          c.none,         s.
 Group.new("CmpItemAbbrMatchFuzzy",          c.green,          c.none,         s.italic)
 Group.new("CmpItemKind",                    c.blue)
 Group.new("CmpItemMenu",                    g.Comment)
+
+-- Telescope
+--        Name                              FG                BG              Style
+----------------------------------------------------------------------------------------------
+Group.new("TelescopePromptBorder",          c.yellow)
+Group.new("TelescopePromptPrefix",          g.TelescopePromptBorder.fg:dark(), c.none, s.bold)
+Group.new("TelescopeResultsBorder",         c.green)
 
