@@ -4,54 +4,56 @@ local v = vim.g
 vim.opt.background = "dark"
 
 local PaleNight = {
-  red = "#ff5370",
-  light_red = "#ff869a",
-  dark_red = "#BE5046",
-  green = "#C3E88D",
-  yellow = "#ffcb6b",
-  dark_yellow = "#F78C6C",
-  blue = "#82b1ff",
-  purple = "#c792ea",
-  blue_purple = "#939ede",
-  cyan = "#89DDFF",
-  white = "#bfc7d5",
-  black = "#292D3E",
-  visual_black = "#000000",
-  comment_grey = "#697098",
-  gutter_fg_grey = "#4B5263",
-  cursor_grey = "#2C323C",
-  visual_grey = "#3E4452",
-  menu_grey = "#3E4452",
-  special_grey = "#3B4048",
-  vertsplit = "#181A1F",
-  white_mask_1 = "#333747",
-  white_mask_3 = "#474b59",
-  white_mask_11 = "#989aa2"
+  fg =              "#a6accd",
+  red =             "#ff5370",
+  light_red =       "#ff869a",
+  dark_red =        "#BE5046",
+  green =           "#C3E88D",
+  yellow =          "#ffcb6b",
+  orange =          "#F78C6C",
+  blue =            "#82b1ff",
+  purple =          "#c792ea",
+  blue_purple =     "#939ede",
+  cyan =            "#89DDFF",
+  white =           "#bfc7d5",
+  black =           "#292D3E",
+  visual_black =    "#000000",
+  comment_grey =    "#697098",
+  gutter_fg_grey =  "#4B5263",
+  cursor_grey =     "#2C323C",
+  visual_grey =     "#3E4452",
+  menu_grey =       "#3E4452",
+  special_grey =    "#3B4048",
+  vertsplit =       "#181A1F",
+  white_mask_1 =    "#333747",
+  white_mask_3 =    "#474b59",
+  white_mask_11 =   "#989aa2",
 }
 
-Color.new('red',PaleNight.red) --, "cterm": "204", "cterm16": "1" }),
-Color.new('light_red',PaleNight.light_red) --, "cterm": "204", "cterm16": "1" }),
-Color.new('dark_red',PaleNight.dark_red) --, "cterm": "196", "cterm16": "9" }),
-Color.new('green',PaleNight.green) --, "cterm": "114", "cterm16": "2" }),
-Color.new('yellow',PaleNight.yellow) --, "cterm": "180", "cterm16": "3" }),
-Color.new('dark_yellow',PaleNight.dark_yellow) --, "cterm": "173", "cterm16": "11" }),
-Color.new('blue',PaleNight.blue) --, "cterm": "39", "cterm16": "4" }),
-Color.new('purple',PaleNight.purple) --, "cterm": "170", "cterm16": "5" }),
-Color.new('blue_purple',PaleNight.blue_purple) --, "cterm": "39", "cterm16": "4"}),
-Color.new('cyan',PaleNight.cyan) --, "cterm": "38", "cterm16": "6" }),
-Color.new('white',PaleNight.white) --, "cterm": "145", "cterm16": "7" }),
-Color.new('black',PaleNight.black) --, "cterm": "235", "cterm16": "0" }),
-Color.new('visual_black',PaleNight.visual_black) --, "cterm": "NONE", "cterm16": "0" }),
-Color.new('comment_grey',PaleNight.comment_grey) --, "cterm": "59", "cterm16": "15" }),
-Color.new('gutter_fg_grey',PaleNight.gutter_fg_grey) --, "cterm": "238", "cterm16": "15" }),
-Color.new('cursor_grey',PaleNight.cursor_grey) --, "cterm": "236", "cterm16": "8" }),
-Color.new('visual_grey',PaleNight.visual_grey) --, "cterm": "237", "cterm16": "15" }),
-Color.new('menu_grey',PaleNight.menu_grey) --, "cterm": "237", "cterm16": "8" }),
-Color.new('special_grey',PaleNight.special_grey) --, "cterm": "238", "cterm16": "15" }),
-Color.new('vertsplit',PaleNight.vertsplit) --, "cterm": "59", "cterm16": "15" }),
-Color.new('white_mask_1',PaleNight.white_mask_1) --, "cterm": "237", "cterm16": "15" }),
-Color.new('white_mask_3',PaleNight.white_mask_3) --, "cterm": "238", "cterm16": "15" }),
-Color.new('white_mask_11',PaleNight.white_mask_11) -- "cterm": "238", "cterm16": "15" })
+Color.new('fg',             PaleNight.fg)
+Color.new('red',            PaleNight.red)
+Color.new('light_red',      PaleNight.light_red)
+Color.new('dark_red',       PaleNight.dark_red)
+Color.new('green',          PaleNight.green)
+Color.new('yellow',         PaleNight.yellow)
+Color.new('orange',         PaleNight.orange)
+Color.new('blue',           PaleNight.blue)
+Color.new('purple',         PaleNight.purple)
+Color.new('blue_purple',    PaleNight.blue_purple)
+Color.new('cyan',           PaleNight.cyan)
+Color.new('white',          PaleNight.white)
+Color.new('black',          PaleNight.black)
+Color.new('visual_black',   PaleNight.visual_black)
+Color.new('comment_grey',   PaleNight.comment_grey)
+Color.new('gutter_fg_grey', PaleNight.gutter_fg_grey)
+Color.new('cursor_grey',    PaleNight.cursor_grey)
+Color.new('visual_grey',    PaleNight.visual_grey)
+Color.new('menu_grey',      PaleNight.menu_grey)
+Color.new('special_grey',   PaleNight.special_grey)
+Color.new('vertsplit',      PaleNight.vertsplit)
+Color.new('white_mask_1',   PaleNight.white_mask_1)
+Color.new('white_mask_3',   PaleNight.white_mask_3)
+Color.new('white_mask_11',    PaleNight.white_mask_11)
 
 v.terminal_color_0  = PaleNight.black
 v.terminal_color_1  = PaleNight.red
@@ -64,7 +66,7 @@ v.terminal_color_7  = PaleNight.white
 v.terminal_color_8  = PaleNight.visual_grey
 v.terminal_color_9  = PaleNight.dark_red
 v.terminal_color_10 = PaleNight.green
-v.terminal_color_11 = PaleNight.dark_yellow
+v.terminal_color_11 = PaleNight.orange
 v.terminal_color_12 = PaleNight.blue
 v.terminal_color_13 = PaleNight.purple
 v.terminal_color_14 = PaleNight.cyan
@@ -73,12 +75,12 @@ v.terminal_color_15 = PaleNight.comment_grey
 --        Name                              FG                BG              Style
 ----------------------------------------------------------------------------------------------
 Group.new("Comment",                        c.comment_grey,   c.none,         s.italic)     -- any comment
-Group.new("Constant",                       c.cyan)                                         -- any constant
+Group.new("Constant",                       c.yellow)                                       -- any constant
 Group.new("String",                         c.green)                                        -- a string constant: "this is a string"
-Group.new("Character",                      c.green)                                        -- a character constant: 'c', '\n'
-Group.new("Number",                         c.dark_yellow)                                  -- a number constant: 234, 0xff
-Group.new("Boolean",                        c.red)                                          -- a boolean constant: TRUE, false
-Group.new("Float",                          c.dark_yellow)                                  -- a floating point constant: 2.3e10
+Group.new("Character",                      c.orange)                                       -- a character constant: 'c', '\n'
+Group.new("Number",                         c.orange)                                       -- a number constant: 234, 0xff
+Group.new("Boolean",                        c.orange)                                       -- a boolean constant: TRUE, false
+Group.new("Float",                          c.orange)                                       -- a floating point constant: 2.3e10
 Group.new("Identifier",                     c.red)                                          -- any variable name
 Group.new("Function",                       c.blue)                                         -- function name (also: methods for classes)
 Group.new("Statement",                      c.purple)                                       -- any statement
@@ -89,7 +91,7 @@ Group.new("Operator",                       c.cyan)                             
 Group.new("Keyword",                        c.red)                                          -- any other keyword
 Group.new("Exception",                      c.purple)                                       -- try, catch, throw
 Group.new("PreProc",                        c.yellow)                                       -- generic Preprocessor
-Group.new("Include",                        c.blue)                                         -- preprocessor #include
+Group.new("Include",                        c.purple)                                       -- preprocessor #include
 Group.new("Define",                         c.purple)                                       -- preprocessor #define
 Group.new("Macro",                          g.Define)                                       -- same as Define
 Group.new("PreCondit",                      c.yellow)                                       -- preprocessor #if, #else, #endif, etc.
@@ -144,9 +146,9 @@ Group.new("Question",                       c.purple)                           
 Group.new("Search",                         c.black,          c.yellow)                     -- Last search pattern highlighting (see 'hlsearch'). Also used for highlighting the current line in the quickfix window and similar items that need to stand out.
 Group.new("SpecialKey",                     c.special_grey)                                 -- Meta and special keys listed with ":map", also for text used to show unprintable characters in the text, 'listchars'. Generally: text that is displayed differently from what it really is.
 Group.new("SpellBad",                       c.red,            c.none,         s.underline)  -- Word that is not recognized by the spellchecker. This will be combined with the highlighting used otherwise.
-Group.new("SpellCap",                       c.dark_yellow)                                  -- Word that should start with a capital. This will be combined with the highlighting used otherwise.
-Group.new("SpellLocal",                     c.dark_yellow)                                  -- Word that is recognized by the spellchecker as one that is used in another region. This will be combined with the highlighting used otherwise.
-Group.new("SpellRare",                      c.dark_yellow)                                  -- Word that is recognized by the spellchecker as one that is hardly ever used. spell This will be combined with the highlighting used otherwise.
+Group.new("SpellCap",                       c.orange)                                       -- Word that should start with a capital. This will be combined with the highlighting used otherwise.
+Group.new("SpellLocal",                     c.orange)                                       -- Word that is recognized by the spellchecker as one that is used in another region. This will be combined with the highlighting used otherwise.
+Group.new("SpellRare",                      c.orange)                                       -- Word that is recognized by the spellchecker as one that is hardly ever used. spell This will be combined with the highlighting used otherwise.
 Group.new("StatusLine",                     c.white,          c.cursor_grey)                -- status line of current window
 Group.new("StatusLineNC",                   c.comment_grey)                                 -- status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
 Group.new("TabLine",                        c.comment_grey)                                 -- tab pages line, not active tab page label
@@ -179,23 +181,23 @@ Group.new("shFunctionKey",                  c.purple)
 Group.new("cssAttrComma",                   c.purple)
 Group.new("cssAttributeSelector",           c.green)
 Group.new("cssBraces",                      c.white)
-Group.new("cssClassName",                   c.dark_yellow)
-Group.new("cssClassNameDot",                c.dark_yellow)
+Group.new("cssClassName",                   c.orange)
+Group.new("cssClassNameDot",                c.orange)
 Group.new("cssDefinition",                  c.purple)
-Group.new("cssFontAttr",                    c.dark_yellow)
+Group.new("cssFontAttr",                    c.orange)
 Group.new("cssFontDescriptor",              c.purple)
 Group.new("cssFunctionName",                c.blue)
 Group.new("cssIdentifier",                  c.blue)
 Group.new("cssImportant",                   c.purple)
-Group.new("cssInclude",                     c.white)
+Group.new("cssInclude",                     c.cyan)
 Group.new("cssIncludeKeyword",              c.purple)
-Group.new("cssMediaType",                   c.dark_yellow)
+Group.new("cssMediaType",                   c.orange)
 Group.new("cssProp",                        c.cyan)
-Group.new("cssPseudoClassId",               c.dark_yellow)
+Group.new("cssPseudoClassId",               c.orange)
 Group.new("cssSelectorOp",                  c.white)
 Group.new("cssSelectorOp2",                 c.purple)
 Group.new("cssTagName",                     c.red)
-Group.new("cssColor",                       c.dark_yellow)
+Group.new("cssColor",                       c.orange)
 Group.new("cssCommonAttr",                  c.blue)
 Group.new("cssUnitDecorators",              c.yellow)
 
@@ -212,7 +214,7 @@ Group.new("htmlArg",                        c.yellow)
 Group.new("htmlEndTag",                     c.cyan)
 Group.new("htmlH1",                         c.white)
 Group.new("htmlLink",                       c.purple)
-Group.new("htmlSpecialChar",                c.dark_yellow)
+Group.new("htmlSpecialChar",                c.orange)
 Group.new("htmlSpecialTagName",             c.red)
 Group.new("htmlTag",                        c.cyan)
 Group.new("htmlTagName",                    c.red)
@@ -228,8 +230,8 @@ Group.new("coffeeExtendedOp",               c.purple)
 Group.new("javaScriptBraces",               c.white)
 Group.new("javaScriptFunction",             c.purple)
 Group.new("javaScriptIdentifier",           c.purple)
-Group.new("javaScriptNull",                 c.dark_yellow)
-Group.new("javaScriptNumber",               c.dark_yellow)
+Group.new("javaScriptNull",                 c.orange)
+Group.new("javaScriptNumber",               c.orange)
 Group.new("javaScriptRequire",              c.cyan)
 Group.new("javaScriptReserved",             c.purple)
 -- https://github.com/pangloss/vim-javascript
@@ -259,13 +261,13 @@ Group.new("jsModuleAs",                     c.purple)
 Group.new("jsModuleWords",                  c.purple)
 Group.new("jsModuleKeyword",                c.blue)
 Group.new("jsModules",                      c.purple)
-Group.new("jsNull",                         c.dark_yellow)
+Group.new("jsNull",                         c.orange)
 Group.new("jsStorageClass",                 c.purple)
 Group.new("jsSuper",                        c.red)
 Group.new("jsTemplateBraces",               c.dark_red)
 Group.new("jsTemplateVar",                  c.green)
 Group.new("jsThis",                         c.red)
-Group.new("jsUndefined",                    c.dark_yellow)
+Group.new("jsUndefined",                    c.orange)
 Group.new("jsVariableDef",                  c.blue)
 -- https://github.com/othree/yajs.vim
 Group.new("javascriptArrowFunc",            c.purple)
@@ -293,8 +295,8 @@ Group.new("javascriptVariable",             c.purple)
 ----------------------------------------------------------------------------------------------
 Group.new("jsonCommentError",               c.white)
 Group.new("jsonKeyword",                    c.blue)
-Group.new("jsonBoolean",                    c.red)
-Group.new("jsonNumber",                     c.dark_yellow)
+Group.new("jsonBoolean",                    c.orange)
+Group.new("jsonNumber",                     c.orange)
 Group.new("jsonQuote",                      c.white)
 Group.new("jsonMissingCommaError",          c.red,            c.none,         s.reverse)
 Group.new("jsonNoQuotesError",              c.red,            c.none,         s.reverse)
@@ -339,7 +341,7 @@ Group.new("mkdURL",                         c.light_red)
 Group.new("rubyAccess",                     c.cyan)
 Group.new("rubyBlockParameter",             c.yellow)
 Group.new("rubyBlockParameterList",         c.white)
-Group.new("rubyBoolean",                    c.red)
+Group.new("rubyBoolean",                    c.orange)
 Group.new("rubyCapitalizedMethod",          c.blue)
 Group.new("rubyClass",                      c.blue)
 Group.new("rubyClassName",                  c.yellow)
@@ -349,7 +351,7 @@ Group.new("rubyEscape",                     c.red)
 Group.new("rubyFunction",                   c.blue)
 Group.new("rubyGlobalVariable",             c.red)
 Group.new("rubyInclude",                    c.cyan)
-Group.new("rubyIncluderubyGlobalVariable",  c.red)
+Group.new("rubyIncluderubyGlobalVariable",  c.cyan)
 Group.new("rubyInstanceVariable",           c.red)
 Group.new("rubyInterpolation",              c.cyan)
 Group.new("rubyInterpolationDelimiter",     c.red)
@@ -374,8 +376,8 @@ Group.new("erubyDelimiter",                 c.red)
 --        Name                              FG                BG              Style
 ----------------------------------------------------------------------------------------------
 Group.new("railsAssetPreProc",              c.comment_grey)
-Group.new("railsAssetInclude",              c.comment_grey)
-Group.new("railsAssetIncluded",             c.comment_grey)
+Group.new("railsAssetInclude",              c.cyan)
+Group.new("railsAssetIncluded",             c.cyan)
 Group.new("rubyRailsMethod",                c.blue)
 Group.new("rubyRailsFilterMethod",          c.cyan)
 Group.new("rubyRailsRenderMethod",          c.cyan)
@@ -393,29 +395,29 @@ Group.new("rspecBeforeAndAfter",            c.white)
 ----------------------------------------------------------------------------------------------
 -- https://github.com/tpope/vim-haml
 Group.new("sassAmpersand",                  c.red)
-Group.new("sassClass",                      c.dark_yellow)
+Group.new("sassClass",                      c.orange)
 Group.new("sassControl",                    c.purple)
 Group.new("sassExtend",                     c.purple)
 Group.new("sassFor",                        c.white)
 Group.new("sassFunction",                   c.cyan)
 Group.new("sassId",                         c.blue)
-Group.new("sassInclude",                    c.purple)
+Group.new("sassInclude",                    c.cyan)
 Group.new("sassMedia",                      c.purple)
 Group.new("sassMediaOperators",             c.white)
 Group.new("sassMixin",                      c.purple)
 Group.new("sassMixinName",                  c.blue)
 Group.new("sassMixing",                     c.purple)
-Group.new("sassVariable",                   c.dark_yellow)
+Group.new("sassVariable",                   c.orange)
 -- https://github.com/cakebaker/scss-syntax.vim
 Group.new("scssExtend",                     c.purple)
-Group.new("scssExtendedSelector",           c.dark_yellow)
+Group.new("scssExtendedSelector",           c.orange)
 Group.new("scssFunctionName",               c.cyan)
 Group.new("scssImport",                     c.purple)
-Group.new("scssInclude",                    c.purple)
+Group.new("scssInclude",                    c.cyan)
 Group.new("scssMixin",                      c.purple)
 Group.new("scssMixinName",                  c.blue)
 Group.new("scssSelectorName",               c.yellow)
-Group.new("scssVariable",                   c.dark_yellow)
+Group.new("scssVariable",                   c.orange)
 
 -- TypeScript
 --        Name                              FG                BG              Style
@@ -435,7 +437,7 @@ Group.new("xmlTagName",                     c.red)
 -- PHP
 --        Name                              FG                BG              Style
 ----------------------------------------------------------------------------------------------
-Group.new("phpInclude",                     c.purple)
+Group.new("phpInclude",                     c.cyan)
 Group.new("phpClass",                       c.yellow)
 Group.new("phpClasses",                     c.yellow)
 Group.new("phpFunction",                    c.blue)
@@ -444,7 +446,7 @@ Group.new("phpKeyword",                     c.purple)
 Group.new("phpVarSelector",                 c.white)
 Group.new("phpIdentifier",                  c.white)
 Group.new("phpMethod",                      c.blue)
-Group.new("phpBoolean",                     c.blue)
+Group.new("phpBoolean",                     c.orange)
 Group.new("phpParent",                      c.white)
 Group.new("phpOperator",                    c.purple)
 Group.new("phpRegion",                      c.purple)
@@ -498,7 +500,7 @@ Group.new("diffRemoved",                    c.red)
 --        Name                              FG                BG              Style
 ----------------------------------------------------------------------------------------------
 Group.new("VistaBracket",                   c.purple)
-Group.new("VistaChildrenNr",                c.dark_yellow)
+Group.new("VistaChildrenNr",                c.orange)
 Group.new("VistaScope",                     c.blue_purple)
 Group.new("VistaTag",                       c.purple)
 Group.new("VistaPrefix",                    c.blue_purple)
@@ -564,3 +566,47 @@ Group.new("TelescopePromptBorder",          c.yellow)
 Group.new("TelescopePromptPrefix",          g.TelescopePromptBorder.fg:dark(), c.none, s.bold)
 Group.new("TelescopeResultsBorder",         c.green)
 
+-- TreeSitter
+Group.new("TSAttribute", c.yellow)
+Group.new("TSBoolean", c.orange)
+Group.new("TSCharacter", c.orange)
+Group.new("TSConstructor", c.purple)
+Group.new("TSConstant", c.yellow)
+Group.new("TSConstBuiltin", c.orange)
+Group.link("TSConstMacro", g.Define)
+Group.link("TSError", g.Error)
+Group.new("TSException", c.red)
+Group.new("TSField", c.blue)
+Group.new("TSFloat", c.red)
+Group.link("TSFuncMacro", g.Define)
+Group.new("TSInclude", c.cyan)
+Group.new("TSKeywordOperator", c.red)
+Group.new("TSKeywordReturn", c.cyan)
+Group.new("TSLabel", c.red)
+Group.new("TSNamespace", c.yellow)
+Group.new("TSNumber", c.orange)
+Group.new("TSOperator", c.cyan)
+Group.new("TSParameter", c.blue)
+Group.new("TSParameterReference", c.blue)
+Group.new("TSProperty", c.gray)
+Group.new("TSPunctDelimiter", c.cyan)
+Group.new("TSPunctBracket", c.cyan)
+Group.new("TSPunctSpecial", c.cyan)
+Group.new("TSStringRegex", c.blue)
+Group.new("TSStringEscape", c.comment_grey)
+Group.new("TSSymbol", c.yellow)
+Group.new("TSStrong", c.blue, c.none, s.bold)
+Group.new("TSType", c.purple)
+Group.new("TSTypeBuiltin", c.purple)
+Group.new("TSTag", c.red)
+Group.new("TSTagDelimiter", c.cyan)
+Group.new("TSTagAttribute", c.comment_grey)
+Group.new("TSText", c.fg)
+Group.new("TSTextReference", c.yellow)
+Group.new("TSEmphasis", c.blue)
+Group.new("TSUnderline", c.fg, c.none, s.underline)
+Group.new("TSStrike", c.none, c.none, s.NONE)
+Group.new("TSTitle", c.white, c.none, s.bold)
+Group.new("TSLiteral", c.fg)
+Group.new("TSURI", c.blue, c.none, s.underline)
+Group.new("TSMath", c.blue)
