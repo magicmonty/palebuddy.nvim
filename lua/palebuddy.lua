@@ -5,6 +5,7 @@ vim.opt.background = "dark"
 
 local PaleNight = {
   fg =              "#a6accd",
+  text =            "#717cb4",
   red =             "#ff5370",
   light_red =       "#ff869a",
   dark_red =        "#BE5046",
@@ -19,6 +20,7 @@ local PaleNight = {
   black =           "#292D3E",
   visual_black =    "#000000",
   comment_grey =    "#697098",
+  border =          "#676E95",
   gutter_fg_grey =  "#4B5263",
   cursor_grey =     "#2C323C",
   visual_grey =     "#3E4452",
@@ -31,6 +33,7 @@ local PaleNight = {
 }
 
 Color.new('fg',             PaleNight.fg)
+Color.new('text',           PaleNight.text)
 Color.new('red',            PaleNight.red)
 Color.new('light_red',      PaleNight.light_red)
 Color.new('dark_red',       PaleNight.dark_red)
@@ -45,6 +48,7 @@ Color.new('white',          PaleNight.white)
 Color.new('black',          PaleNight.black)
 Color.new('visual_black',   PaleNight.visual_black)
 Color.new('comment_grey',   PaleNight.comment_grey)
+Color.new('border',         PaleNight.border)
 Color.new('gutter_fg_grey', PaleNight.gutter_fg_grey)
 Color.new('cursor_grey',    PaleNight.cursor_grey)
 Color.new('visual_grey',    PaleNight.visual_grey)
@@ -74,6 +78,8 @@ v.terminal_color_15 = PaleNight.comment_grey
 
 --        Name                              FG                BG              Style
 ----------------------------------------------------------------------------------------------
+Group.new("NormalFloat",                    c.fg,             c.visual_grey)
+Group.new("FloatBorder",                    c.border)
 Group.new("Comment",                        c.comment_grey,   c.none,         s.italic)     -- any comment
 Group.new("Constant",                       c.yellow)                                       -- any constant
 Group.new("String",                         c.green)                                        -- a string constant: "this is a string"
@@ -473,7 +479,7 @@ Group.new("dartKeyword",                    c.purple)
 --        Name                              FG                BG              Style
 ----------------------------------------------------------------------------------------------
 Group.new("SignifySignAdd",                 c.green)
-Group.new("SignifySignChange",              c.yellow)
+Group.new("SignifySignChange",              c.blue)
 Group.new("SignifySignDelete",              c.red)
 
 -- airblade/vim-gitgutter
@@ -495,6 +501,10 @@ Group.new("NeomakeInfoSign",                c.blue)
 ----------------------------------------------------------------------------------------------
 Group.new("diffAdded",                      c.green)
 Group.new("diffRemoved",                    c.red)
+Group.new("diffChanged",                    c.blue)
+Group.new("diffOldFile",                    c.text)
+Group.new("diffLine",                       c.cyan)
+Group.new("diffIndexLine",                  c.purple)
 
 -- liuchengxu/vista.vim
 --        Name                              FG                BG              Style
@@ -567,46 +577,95 @@ Group.new("TelescopePromptPrefix",          g.TelescopePromptBorder.fg:dark(), c
 Group.new("TelescopeResultsBorder",         c.green)
 
 -- TreeSitter
-Group.new("TSAttribute", c.yellow)
-Group.new("TSBoolean", c.orange)
-Group.new("TSCharacter", c.orange)
-Group.new("TSConstructor", c.purple)
-Group.new("TSConstant", c.yellow)
-Group.new("TSConstBuiltin", c.orange)
+--        Name                              FG                BG              Style
+----------------------------------------------------------------------------------------------
+Group.new("TSAttribute",                    c.yellow)
+Group.new("TSBoolean",                      c.orange)
+Group.new("TSCharacter",                    c.orange)
+Group.new("TSConstructor",                  c.purple)
+Group.new("TSConstant",                     c.yellow)
+Group.new("TSConstBuiltin",                 c.orange)
 Group.link("TSConstMacro", g.Define)
 Group.link("TSError", g.Error)
-Group.new("TSException", c.red)
-Group.new("TSField", c.blue)
-Group.new("TSFloat", c.red)
+Group.new("TSException",                    c.red)
+Group.new("TSField",                        c.blue)
+Group.new("TSFloat",                        c.red)
 Group.link("TSFuncMacro", g.Define)
-Group.new("TSInclude", c.cyan)
-Group.new("TSKeywordOperator", c.red)
-Group.new("TSKeywordReturn", c.cyan)
-Group.new("TSLabel", c.red)
-Group.new("TSNamespace", c.yellow)
-Group.new("TSNumber", c.orange)
-Group.new("TSOperator", c.cyan)
-Group.new("TSParameter", c.blue)
-Group.new("TSParameterReference", c.blue)
-Group.new("TSProperty", c.gray)
-Group.new("TSPunctDelimiter", c.cyan)
-Group.new("TSPunctBracket", c.cyan)
-Group.new("TSPunctSpecial", c.cyan)
-Group.new("TSStringRegex", c.blue)
-Group.new("TSStringEscape", c.comment_grey)
-Group.new("TSSymbol", c.yellow)
-Group.new("TSStrong", c.blue, c.none, s.bold)
-Group.new("TSType", c.purple)
-Group.new("TSTypeBuiltin", c.purple)
-Group.new("TSTag", c.red)
-Group.new("TSTagDelimiter", c.cyan)
-Group.new("TSTagAttribute", c.comment_grey)
-Group.new("TSText", c.fg)
-Group.new("TSTextReference", c.yellow)
-Group.new("TSEmphasis", c.blue)
-Group.new("TSUnderline", c.fg, c.none, s.underline)
-Group.new("TSStrike", c.none, c.none, s.NONE)
-Group.new("TSTitle", c.white, c.none, s.bold)
-Group.new("TSLiteral", c.fg)
-Group.new("TSURI", c.blue, c.none, s.underline)
-Group.new("TSMath", c.blue)
+Group.new("TSInclude",                      c.cyan)
+Group.new("TSKeywordOperator",              c.red)
+Group.new("TSKeywordReturn",                c.cyan)
+Group.new("TSLabel",                        c.red)
+Group.new("TSNamespace",                    c.yellow)
+Group.new("TSNumber",                       c.orange)
+Group.new("TSOperator",                     c.cyan)
+Group.new("TSParameter",                    c.blue)
+Group.new("TSParameterReference",           c.blue)
+Group.new("TSProperty",                     c.gray)
+Group.new("TSPunctDelimiter",               c.cyan)
+Group.new("TSPunctBracket",                 c.cyan)
+Group.new("TSPunctSpecial",                 c.cyan)
+Group.new("TSStringRegex",                  c.blue)
+Group.new("TSStringEscape",                 c.comment_grey)
+Group.new("TSSymbol",                       c.yellow)
+Group.new("TSStrong",                       c.blue,           c.none,         s.bold)
+Group.new("TSType",                         c.purple)
+Group.new("TSTypeBuiltin",                  c.purple)
+Group.new("TSTag",                          c.red)
+Group.new("TSTagDelimiter",                 c.cyan)
+Group.new("TSTagAttribute",                 c.comment_grey)
+Group.new("TSText",                         c.fg)
+Group.new("TSTextReference",                c.yellow)
+Group.new("TSEmphasis",                     c.blue)
+Group.new("TSUnderline",                    c.fg,             c.none,         s.underline)
+Group.new("TSStrike",                       c.none,           c.none,         s.NONE)
+Group.new("TSTitle",                        c.white,          c.none,         s.bold)
+Group.new("TSLiteral",                      c.fg)
+Group.new("TSURI",                          c.blue,           c.none,         s.underline)
+Group.new("TSMath",                         c.blue)
+Group.new("TSComment",                      c.comment_grey,   c.none,         s.italic)
+Group.new("TSString",                       c.green)
+Group.new("TSConditional",                  c.purple)
+Group.new("TSKeyword",                      c.cyan)
+Group.new("TSRepeat",                       c.purple)
+Group.new("TSKeywordFunction",              c.purple)
+Group.new("TSFunction",                     c.blue)
+Group.new("TSMethod",                       c.blue)
+Group.new("TSFuncBuiltin",                  c.cyan)
+Group.new("TSVariable",                     c.fg,             c.none,         s.italic)
+Group.new("TSVariableBuiltin",              c.fg,             c.none,         s.italic)
+
+-- LspSaga
+--        Name                              FG                BG              Style
+----------------------------------------------------------------------------------------------
+Group.new("LspFloatWinNormal",              c.text,           c.black)
+Group.new("LspFloatWinBorder",              c.purple)
+Group.link("DiagnosticError",               g.Error)
+Group.new("DiagnosticWarning",              c.yellow)
+Group.new("DiagnosticInformation",          c.blue)
+Group.new("DiagnosticHint",                 c.purple)
+Group.new("LspSagaDiagnosticBorder",        c.border)
+Group.new("LspSagaDiagnosticHeader",        c.blue)
+Group.new("LspSagaDiagnosticTruncateLine",  c.border)
+Group.new("LspLinesDiagBorder",             c.cursor_grey)
+Group.new("ProviderTruncateLine",           c.border)
+Group.new("LspSagaShTruncateLine",          c.border)
+Group.new("LspSagaDocTruncateLine",         c.border)
+Group.new("LineDiagTruncateLine",           c.border)
+Group.new("LspSagaBorderTitle",             c.cyan)
+Group.new("LspSagaHoverBorder",             c.blue)
+Group.new("LspSagaRenameBorder",            c.green)
+Group.new("LspSagaDefPreviewBorder",        c.green)
+Group.new("LspSagaCodeActionTitle",         c.blue)
+Group.new("LspSagaCodeActionContent",       c.purple)
+Group.new("LspSagaCodeActionBorder",        c.blue)
+Group.new("LspSagaCodeActionTruncateLine",  c.border)
+Group.new("LspSagaSignatureHelpBorder",     c.orange)
+Group.new("LspSagaFinderSelection",         c.green)
+Group.new("LspSagaAutoPreview",             c.red)
+Group.new("ReferencesCount",                c.purple)
+Group.new("DefinitionCount",                c.purple)
+Group.new("DefinitionPreviewTitle",         c.green)
+Group.new("DefinitionIcon",                 c.blue)
+Group.new("ReferencesIcon",                 c.blue)
+Group.new("TargetWord",                     c.cyan)
+
