@@ -6,27 +6,36 @@ vim.opt.background = "dark"
 local PaleNight = {
   fg =              "#a6accd",
   text =            "#717cb4",
-  red =             "#ff5370",
-  light_red =       "#ff869a",
-  dark_red =        "#BE5046",
-  green =           "#C3E88D",
+
+  black =           "#292d3e",
+  red =             "#f07178",
+  green =           "#c3e88d",
   yellow =          "#ffcb6b",
-  orange =          "#F78C6C",
-  blue =            "#82b1ff",
+  blue =            "#82aaff",
   purple =          "#c792ea",
+  cyan =            "#89ddff",
+  white =           "#d0d0d0",
+
+  light_black =     "#434758",
+  light_red =       "#ff869a",
+  light_green =     "#ddffa7",
+  light_yellow =    "#ffe585",
+  light_blue =      "#9cc4ff",
+  light_purple =    "#e1acff",
+  light_cyan =      "#a3f7ff",
+  light_white =     "#ffffff",
+
+  dark_red =        "#be5046",
+  orange =          "#f78c6c",
   blue_purple =     "#939ede",
-  cyan =            "#89DDFF",
-  white =           "#bfc7d5",
-  black =           "#292D3E",
   visual_black =    "#000000",
   comment_grey =    "#697098",
-  border =          "#676E95",
-  gutter_fg_grey =  "#4B5263",
-  cursor_grey =     "#2C323C",
-  visual_grey =     "#3E4452",
-  menu_grey =       "#3E4452",
-  special_grey =    "#3B4048",
-  vertsplit =       "#181A1F",
+  border =          "#676e95",
+  gutter_fg_grey =  "#4b5263",
+  cursor_grey =     "#2c323c",
+  visual_grey =     "#3e4452",
+  special_grey =    "#3b4048",
+  vertsplit =       "#181a1f",
   white_mask_1 =    "#333747",
   white_mask_3 =    "#474b59",
   white_mask_11 =   "#989aa2",
@@ -34,30 +43,36 @@ local PaleNight = {
 
 Color.new('fg',             PaleNight.fg)
 Color.new('text',           PaleNight.text)
+Color.new('black',          PaleNight.black)
 Color.new('red',            PaleNight.red)
-Color.new('light_red',      PaleNight.light_red)
-Color.new('dark_red',       PaleNight.dark_red)
 Color.new('green',          PaleNight.green)
 Color.new('yellow',         PaleNight.yellow)
-Color.new('orange',         PaleNight.orange)
 Color.new('blue',           PaleNight.blue)
 Color.new('purple',         PaleNight.purple)
-Color.new('blue_purple',    PaleNight.blue_purple)
 Color.new('cyan',           PaleNight.cyan)
 Color.new('white',          PaleNight.white)
-Color.new('black',          PaleNight.black)
+Color.new('light_black',    PaleNight.light_black)
+Color.new('light_red',      PaleNight.light_red)
+Color.new('light_green',    PaleNight.light_green)
+Color.new('light_yellow',   PaleNight.light_yellow)
+Color.new('light_blue',     PaleNight.light_blue)
+Color.new('light_purple',   PaleNight.light_purple)
+Color.new('light_cyan',     PaleNight.light_cyan)
+Color.new('light_white',    PaleNight.light_white)
+Color.new('dark_red',       PaleNight.dark_red)
+Color.new('orange',         PaleNight.orange)
+Color.new('blue_purple',    PaleNight.blue_purple)
 Color.new('visual_black',   PaleNight.visual_black)
 Color.new('comment_grey',   PaleNight.comment_grey)
 Color.new('border',         PaleNight.border)
 Color.new('gutter_fg_grey', PaleNight.gutter_fg_grey)
 Color.new('cursor_grey',    PaleNight.cursor_grey)
 Color.new('visual_grey',    PaleNight.visual_grey)
-Color.new('menu_grey',      PaleNight.menu_grey)
 Color.new('special_grey',   PaleNight.special_grey)
 Color.new('vertsplit',      PaleNight.vertsplit)
 Color.new('white_mask_1',   PaleNight.white_mask_1)
 Color.new('white_mask_3',   PaleNight.white_mask_3)
-Color.new('white_mask_11',    PaleNight.white_mask_11)
+Color.new('white_mask_11',  PaleNight.white_mask_11)
 
 v.terminal_color_0  = PaleNight.black
 v.terminal_color_1  = PaleNight.red
@@ -144,7 +159,7 @@ Group.new("ModeMsg")                                                            
 Group.new("MoreMsg")                                                                        -- more-prompt
 Group.new("NonText",                        c.special_grey)                                 -- '~' and '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line).
 Group.new("Normal",                         c.white,          c.black)                      -- normal text
-Group.new("Pmenu",                          c.none,           c.menu_grey)                  -- Popup menu: normal item.
+Group.new("Pmenu",                          c.none,           c.visual_grey)                  -- Popup menu: normal item.
 Group.new("PmenuSel",                       c.black,          c.blue)                       -- Popup menu: selected item.
 Group.new("PmenuSbar",                      c.none,           c.special_grey)               -- Popup menu: scrollbar.
 Group.new("PmenuThumb",                     c.none,           c.white)                      -- Popup menu: Thumb of the scrollbar.
